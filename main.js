@@ -6,11 +6,16 @@ import {Provider} from 'react-redux';
 import  routes from './src/routes';
 import configureStore from './src/stores/createStore';
 
+
+let  store = configureStore();
+
 class App extends React.Component {
+
     render() {
+
         return (
 
-            <Provider store={configureStore()} >
+            <Provider store={store} >
             <View style={styles.container}>
                 {Platform.OS === 'ios' && <StatusBar animated={true} barStyle={'light-content'} />}
                 {Platform.OS === 'android' &&

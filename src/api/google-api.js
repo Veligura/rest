@@ -8,9 +8,9 @@ export const getLocalPlaces = (location, radius,)=>{
        key: GOOGLE_API_KEY,
        location,
        radius,
-       type: 'restauran'
+       type: 'food'
    };
-
+console.log(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?${Object.keys(params).map(key=>key+"="+ params[key]).join('&')}`)
 return ajax(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?${Object.keys(params).map(key=>key+"="+ params[key]).join('&')}`);
 };
 

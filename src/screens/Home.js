@@ -26,7 +26,7 @@ export class Home extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.statusBar}/>
-                <MapComponent props={this.props}/>
+                <MapComponent />
             </View>
         )
     }
